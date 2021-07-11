@@ -111,4 +111,156 @@ print(b)
 a = "Life is too short, You need Python"
 
 # a[시작 번호 : 끝 번호]
+print("<문자열 슬라이싱>")
 print(a[0:4])
+print(a[0:3])
+print(a[0:5])
+print(a[0:2])
+print(a[5:7])
+print(a[12:17])
+print(a[19:])
+print(a[:17])
+print(a[:])
+print(a[19:-7])
+
+# 슬라이싱으로 문자열 나누기
+a = "20010331Rainy"
+date = a[:8]
+weather = a[8:]
+print(date)
+print(weather)
+
+a = "20010331Rainy"
+year = a[:4] # 처음부터 a[3]까지
+day = a[4:8] # a[4]부터 a[7]까지
+weather = a[8:] # a[8]부터 마지막까지
+print(year)
+print(day)
+print(weather)
+
+
+# Pithon이라는 문자열을 Python으로 바꾸려면?
+a = "Pithon"
+print(a[:1])
+print(a[2:])
+print(a[:1] + 'y' + a[2:])
+
+# 문자열 포매팅
+
+# 1. 숫자 바로 대입
+print("I eat %d apples."%3)
+
+# 2. 문자열 바로 대입
+print("I eat %s apples." % "five")
+
+# 3. 숫자 값을 나타내는 변수로 대입
+number = 3
+print("I eat %d apples." % number)
+
+# 4. 2개 이상의 값 넣기
+number = 10
+day = "three"
+print("I ate %d apples. so I was sick for %s days." % (number, day))
+
+# 문자열 포맷 코드
+# %s : 문자열(String)
+# %c : 문자 1개(Character)
+# %d : 정수(Integer)
+# %f : 부동 소수(Floating-point)
+# %o : 8진수
+# %x : 16진수
+# % % : Literal % (문자 '%' 자체)
+
+# 연습문제
+print("I have %s apples" %3)
+print("rate is %s"% 3.234)
+print("Error is %d%%." % 98)
+
+# 포맷 코드와 숫자 함께 사용하기
+# 1. 정렬과 공백
+
+print("%10s" % "hi") # 오른쪽 정렬
+print("%-10sjane" % 'hi') # 왼쪽 정렬
+
+# 2. 소수점 표현하기
+print("%0.4f" %3.42134234) # 소수점 네 번째 자리까지만 나타내고 싶은 경우
+print("%10.4f" % 3.42134234) # 소수점 네 번째 자리까지만 표시 전체 길이가 10개인 문자열 공간에서 오른쪽으로 정렬
+
+# format함수를 사용한 포매팅
+
+# 1. 숫자 바로 대입하기
+print("I eat {0} apples".format(3))
+
+# 2. 문자열 바로 대입하기
+print("I eat {0} apples".format("five"))
+
+# 3. 숫자 값을 가진 변수로 대입하기
+number = 3
+print("I eat {0} apples".format(number))
+
+# (1) 2개 이상의 값 넣기
+number = 10
+day = "three"
+print("I ate {0} apples. so I was sick for {1} days.".format(number, day))
+
+# (2) 이름으로 넣기
+print("I ate {number} apples. so Iwas sick for {day} days.".format(number = 10, day = 3))
+
+# (3) 인덱스와 이름을 혼용해서 넣기
+print("I ate {0} apples. so I was sick for {day} days.".format(10, day = 3))
+
+# (4) 왼쪽 정렬
+print("{0:<10}".format("hi"))
+
+# (5) 오른쪽 정렬
+print("{0:>10}".format("hi"))
+
+# (6) 가운데 정렬
+print("{0:^10}".format("hi"))
+
+# (7) 공백 채우기
+print("{0:=^10}".format("hi"))
+print("{0:!<10}".format("hi"))
+
+# (8) 소수점 표현하기
+y = 3.42134234
+
+# {값:자리수.소수점 자리수}
+print("{0:0.4f}".format(y))
+print("{0:10.4f}".format(y))
+
+# (9) { 또는 } 문자 표현하기
+print("{{ and }}".format())
+
+# (10) f 문자열 포매팅
+name = "이수영"
+age = '28'
+print(f'나의 이름은 {name}입니다. 나이는 {age}입니다.')
+
+age = 30
+print(f'나는 내년이면 {age+1}살이 된다.')
+
+# 딕셔너리 f문자열 포매팅
+d = {'name': '이수영', 'age':27}
+print(f'나의 이름은 {d["name"]}입니다. 나이는 {d["age"]}입니다.')
+
+# f문자열 포매팅 정렬
+print(f'{"hi":<10}') # 왼쪽 정렬
+print(f'{"hi":>10}') # 오른쪽 정렬
+print(f'{"hi":^10}') # 가운데 정렬
+
+# f문자열 포매팅 공백채우기
+print(f'{"hi":=^10}') # 가운데 정렬하고 = 문자로 공백 채우기
+print(f'{"hi":!<10}') # 왼쪽 정렬하고 ! 문자로 공백 채우기
+
+# f문자열 포매팅 소수점
+y = 3.42134234
+print(f'{y:0.4f}') # 소수점 4자리까지만 표현
+print(f'{y:10.4f}') # 소수점 4자리까지 표현하고 총 자리숫를 10으로 맞춤
+
+# f문자열 문자표현
+print(f'{{ and }}')
+
+# 연습문제
+print(f'{"python":!^12}') # f문자열 방식
+print('{0:!^12}'.format("python")) # format 방식
