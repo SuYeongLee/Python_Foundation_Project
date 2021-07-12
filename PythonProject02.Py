@@ -264,3 +264,53 @@ print(f'{{ and }}')
 # 연습문제
 print(f'{"python":!^12}') # f문자열 방식
 print('{0:!^12}'.format("python")) # format 방식
+
+
+# 문자열 관련 함수
+# 1. 문자 개수 세기(count)
+a = "hobby"
+print(a.count('b'))
+
+# 2. 위치알려주기 1(find)
+a = "Python is the best choice"
+print(a.find('b'))
+print(a.find('k')) # 문자에 없을 경우 -1로 반환
+
+# 3. 위치 알려주기 2(index)
+a = "Life is too short"
+print(a.index('t'))
+
+# 4. 문자열 삽입(join)
+print(",".join('abcd'))
+print(",".join(['a','b','c','d']))
+
+# 5. 소문자를 대문자로 바꾸기(upper)
+a = "hi"
+print(a.upper())
+
+# 6.대문자를 소문자로 바꾸기(lower)
+a = "HI"
+print(a.lower())
+
+# 7. 왼쪽 공백 지우기(lstrip)
+a = " hi "
+print(a.lstrip())
+
+# 8. 오른쪽 공백 지우기(rstrip)
+a = " hi "
+print(a.rstrip())
+
+# 9. 양쪽 공백 지우기(strip)
+a = " hi "
+print(a.strip())
+
+# 10. 문자열 바꾸기(replace)
+a = "Life is too short"
+# (바뀌게 될 문자열, 바꿀 문자열)
+print(a.replace("Life", "Your leg"))
+
+# 11. 문자열나누기(split)
+a = "Life is too short"
+print(a.split()) # 공백을 기준으로 문자열 나눔
+b = "a:b:c:d"
+print(b.split(':')) # : 기호를 기준으로 문자열 나눔
