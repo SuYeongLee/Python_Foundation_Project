@@ -49,3 +49,55 @@ print(dic['name'])
 print(dic['phone'])
 print(dic['birth'])
 
+# 2. 딕셔너리 만들 때 주의할 사항
+
+a = {1:'a', 1:'b'} # 1이라는 Key 값이 증복으로 사용
+print(a) # 1:'a' 쌍이 무시됨
+
+# 리스트로 Key를 설정하면?
+
+# a = {[1,2] : 'hi'} # 리스트를 key로 사용
+# print(a) # Key값은 딕셔너리로 사용 할 수 없음
+
+# 딕셔너리 관련 함수
+
+# 1. Key 리스트 만들기(keys)
+
+a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
+print(a.keys()) # 딕셔너리 a의 Key만을 모아서 dict_keys 객체를 돌려줌
+
+for k in a.keys():
+    print(k)
+
+print(list(a.keys())) # dict_keys 객체를 리스트로 변환
+
+# 2. Value 리스트 만들기(values)
+print(a.values())
+
+# 3. key, Value 쌍 얻기(items)
+print(a.items())
+
+# 4. key:Value 쌍 모두 지우기(clear)
+a.clear()
+print(a)
+
+# 5. key로 value 얻기(get)
+a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
+print(a.get('name'))
+print(a.get('phone'))
+print(a.get('birth'))
+
+
+a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
+print(a.get('nokey')) # None을 리턴함
+# print(a['nokey'])
+
+print(a.get('foo', 'bar'))
+
+# 6. 해당 key가 딕셔너리 안에 있는지 조사하기(in)
+a = {'name':'pey','phone':'0119993323','birth':'1118'}
+print('name' in a) # 딕셔너리 안에 존재하므로 True
+print('email' in a) # 딕셔너리 안에 존재하지 않으므로 False
+
+dic = {'name':'홍길동','birth':'1128','age':'30'}
+print(dic)
