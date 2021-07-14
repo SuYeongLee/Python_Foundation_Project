@@ -99,5 +99,6 @@ a = {'name':'pey','phone':'0119993323','birth':'1118'}
 print('name' in a) # 딕셔너리 안에 존재하므로 True
 print('email' in a) # 딕셔너리 안에 존재하지 않으므로 False
 
+# 연습문제
 dic = {'name':'홍길동','birth':'1128','age':'30'}
 print(dic)
