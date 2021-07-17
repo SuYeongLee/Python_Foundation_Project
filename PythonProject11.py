@@ -54,3 +54,39 @@ add = 0
 for i in range(1, 11):
     add = add + i
 print(add)
+
+# marks3.py
+marks = [90, 25, 67, 45, 80]
+for number in range(len(marks)):
+    if marks[number] < 60: continue # 점수가 60점 미만이면 맨 처음으로 돌아간다.
+    print("%d번 학생 축하합니다. 합격입니다." % (number + 1))
+
+
+# for와 range를 사용한 구구단
+for i in range(2, 10): # 1번 for문
+    for j in range(1, 10): #2번 for문
+        print(i*j, end=" ")
+    print('')
+
+# 리스트 내포 사용하기
+
+a = [1,2,3,4]
+result = []
+for num in a:
+    result.append(num*3)
+
+print(result)
+
+a = [1,2,3,4]
+result = [num * 3 for num in a if num % 2 == 0]
+print(result)
+
+# [표현식 for 항목 in 반복 가능 객체 if 조건]
+# [표현식 for 항목1 in 반복 가능 객체1 if 조건1
+#         for 항목2 in 반복 가능 객체2 if 조건2
+#         for 항목n in 반복 가능 객체n if 조건n]
+
+result = [x*y for x in range(2, 10)
+    for y in range(1, 10)]
+print(result)
+
