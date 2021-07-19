@@ -1,0 +1,17 @@
+# 모듈 만들기
+
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+# print(add(1, 4))
+# print(sub(4, 2))
+
+
+# if__name__=="__main__":의 의미
+
+if __name__ == "__main__":
+    print(add(1, 4))
+    print(sub(4, 2))
