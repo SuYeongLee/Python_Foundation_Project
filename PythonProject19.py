@@ -154,3 +154,104 @@ def two_times(numberList):
 
 result = two_times([1, 2, 3, 4])
 print(result)
+
+# max 
+# max(iterable)는 인수로 반복 가능한 자료형을 입력받아 그 최댓값을 돌려주는 함수
+
+print(max([1,2,3])) # 최댓값 = 3
+print(max("python"))
+
+
+# min
+# min(iterable)은 max함수와 반대로, 인수로 반복 가능한 자료형을 입력받아 그 최솟값을 돌려주는 함수
+print(min([1,2,3])) # 최소값 = 1
+print(min("python"))
+
+# oct
+# oct(x)는 정수 형태의 숫자르 8진수 문자열로 바꾸어 돌려주는 함수
+
+print(oct(34))
+print(oct(12345))
+
+# open
+# open(filename, [mode])은 '파일 이름'과 '읽기 방법'을 입력받아 파일 객체를 돌려주는 함수
+
+# [w : 쓰기모드로 파일 열기 / r : 읽기 모드로 파일 열기 / a : 추가 모드로 파일 열기 / b : 바이너리 모드로 파일열기]
+
+#f = open("binary_file", "rb")
+
+# fread = open("read_mode.txt", 'r')
+# fread2 = open("read_mode.txt")
+
+# fappend = open("append_mode.txt", 'a')
+
+# ord
+# ord(c)는 문자의 아스키 코드 값을 돌려주는 함수
+
+print(ord('a'))
+print(ord('0'))
+
+# pow
+# pow(x, y)는 x의 y 제곱한 결괏값을 돌려주는 함수
+
+print(pow(2, 4))
+print(pow(3, 3))
+
+# range
+# range([start,]stop[,stepl])는 for문과 함께 자주 사용하는 함수
+
+# 인수가 하나일 경우
+print(list(range(5)))
+
+# 인수가 하나일 경우
+print(list(range(5, 10)))
+
+# 인수가 3개일 경우
+print(list(range(1, 10, 2))) # 1부터 9까지, 숫자 사이의 거리는 2
+print(list(range(0, -10, -1))) # 0부터 -9까지, 숫자 사이의 거리는 -1
+
+# round
+# round(number[, ndigits]) 함수는 숫자를 입력받아 반올림해 주는 함수
+print(round(4.6))
+print(round(4.2))
+
+print(round(5.678, 2))
+
+
+# sorted
+# sorted(iterable) 함수는 입력값을 정렬한 후 그 결과를 리스트로 돌려주는 함수
+
+print(sorted([3, 1, 2]))
+print(sorted(['a', 'c', 'b']))
+print(sorted("zero"))
+print(sorted([3,2,1]))
+
+# str
+# str(object)은 문자열 형태로 객체를 변환하여 돌려주는 함수
+print(str(3))
+print(str('hi'))
+print(str('hi'.upper()))
+
+# sum
+# sum(iterable)은 입력받은 리스트나 튜플의 모든 요소의 합을 돌려주는 함수
+
+print(sum([1,2,3])) # 리스트 방식
+print(sum((4,5,6))) # 튜플 방식
+
+# tuple
+# tuple(iterable)은 반복 가능한 자료형을 입력받아 튜플 형태로 바꾸어 돌려주는 함수
+print(tuple("abc"))
+print(tuple([1, 2, 3]))
+print(tuple((1, 2, 3)))
+
+# type
+# type(object)은 입력값의 자료형이 무엇인지 알려주는 함수
+print(type("abc")) # "abc"는 문자열 자료형
+print(type([])) # []는 리스트 자료형
+print(type(open("test", 'w')))
+
+# zip
+# zip(*iterable)은 동일한 개수로 이루어진 자료형을 묶어 주는 역할을 하는 함수
+print(list(zip([1,2,3], [4,5,6])))
+print(list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9])))
+print(list(zip("abc", "def")))
