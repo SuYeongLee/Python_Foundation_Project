@@ -222,3 +222,115 @@ print("".join(["you", "need", "python"]))
 
 # f = open("C:/CodeProject/Python_Foundation_Project/test.txt", 'w')
 # f.close()
+
+# 262 ~ 265P
+
+# 1번 문제
+
+class Calculator:
+    def __init__(self):
+        self.value = 0
+
+    def add(self, val):
+        self.value += val
+
+class UpgradeCalculator(Calculator):
+    def minus(self, val):
+        self.value -= val
+
+
+cal = UpgradeCalculator()
+cal.add(10)
+cal.minus(7)
+
+print(cal.value)
+
+
+# 2번 문제
+
+class MaxLimitCalculator(Calculator):
+    def add(self, val):
+        self.value += val
+        if self.value > 100:
+            self.value = 100
+
+cal = MaxLimitCalculator()
+cal.add(50) # 50 더하기
+cal.add(60) # 60 더하기
+
+print(cal.value) # 100 출력
+
+class Calculator:
+    def __init__(self):
+        self.value = 0
+
+    def add(self, val):
+        self.value += val
+
+# 3번 문제
+
+print(all([1, 2, abs(-3)-3]))
+print(chr(ord('a')) == 'a')
+
+# 4번 문제
+
+print(list(filter(lambda x:x>0, [1,-2, 3, -5, 8, -3])))
+
+# 5번 문제
+
+print(hex(234))
+print(int('0xea', 16)) # 16진수 문자열을 10진수로 변경
+
+# 6번 문제
+
+print(list(map(lambda x:x*3, [1,2,3,4])))
+
+# 7번 문제
+
+a = [-8, 2, 7, 5, -3, 5, 0, 1]
+print(max(a) + min(a))
+
+# 8번 문제
+
+print(17 / 3)
+print(round(17 / 3, 4))
+
+# 9번 문제
+
+import sys
+
+numbers = sys.argv[1:] # 파일 이름을 제외한 명령 행의 모든 입력
+
+result = 0
+for number in numbers:
+    result += int(number)
+print(result)
+
+# 10번 문제
+
+import os
+os.chdir("C:/CodeProject/Python_Foundation_Project")
+result = os.popen("dir")
+print(result.read())
+
+# 11번 문제
+
+import glob 
+glob.glob("C:/CodeProject/Python_Foundation_Project/*.py")
+
+# 12번 문제
+
+import time
+print(time.strftime("%Y/%m/%d %H:%M:%S"))
+
+# 13번 문제
+
+import random
+
+result = []
+while len(result) < 6:
+    num = random.randint(1, 45) # 1부터 45까지의 난수 발생
+    if num not in result:
+        result.append(num)
+
+print(result)
