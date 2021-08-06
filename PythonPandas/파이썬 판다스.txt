@@ -1,0 +1,9 @@
+Python Pandas 예제 문제 연습
+
+기초 연습
+
+사용법 : 주피터 노트북으로 업로드 하여 사용할 것
+
+실습 책 : Doit! 데이터 분석을 위한 판다스 입문
+
+단, 판다스 결과를 확인할려면 https://github.com/easysIT/doit_pandas
